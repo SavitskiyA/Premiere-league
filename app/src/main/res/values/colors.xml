@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimary">#38003c</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="chelseaBlue">#0a4595</color>
@@ -8,5 +8,8 @@
     <color name="white">#ffffff</color>
     <color name="whiteTransparent">#54ffffff</color>
     <color name="apl">#38003c</color>
+    <color name="chelseaBlueTransparent">#CC0a4595</color>
+    <color name="grey">#e8e8e8</color>
+
 
 </resources>

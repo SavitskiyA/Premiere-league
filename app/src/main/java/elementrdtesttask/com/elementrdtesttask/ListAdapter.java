@@ -1,6 +1,7 @@
 package elementrdtesttask.com.elementrdtesttask;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -48,7 +49,7 @@ public class ListAdapter extends BaseAdapter implements Filterable {
 
     @Override
     public Object getItem(int position) {
-       return  players.get(position);
+        return players.get(position);
     }
 
     @Override
@@ -62,9 +63,9 @@ public class ListAdapter extends BaseAdapter implements Filterable {
         View v = inflater.inflate(R.layout.row_layout, null);
 
         linearLayout = (LinearLayout) v.findViewById(R.id.linearLayout);
-        if(fragment instanceof FragmentOne) {
+        if (fragment instanceof FragmentOne) {
             linearLayout.setBackgroundColor(fragment.getActivity().getResources().getColor(R.color.arsenalRed));
-        }else {
+        } else {
             linearLayout.setBackgroundColor(fragment.getActivity().getResources().getColor(R.color.chelseaBlue));
         }
 
@@ -83,7 +84,7 @@ public class ListAdapter extends BaseAdapter implements Filterable {
 
     @Override
     public Filter getFilter() {
-        if(customFilter==null){
+        if (customFilter == null) {
             customFilter = new CustomFilter();
         }
         return customFilter;
@@ -95,25 +96,25 @@ public class ListAdapter extends BaseAdapter implements Filterable {
         protected FilterResults performFiltering(CharSequence constraint) {
             FilterResults filterResults = new FilterResults();
 
-            if(constraint!=null&&constraint.length()>0){
-                constraint=constraint.toString().toUpperCase();
+            if (constraint != null && constraint.length() > 0) {
+                constraint = constraint.toString().toUpperCase();
                 ArrayList<RowModel> filters = new ArrayList<>();
 
-                for(int i=0; i<filteredPlayers.size();i++){
-                    if(filteredPlayers.get(i).getName().toUpperCase().contains(constraint)){
+                for (int i = 0; i < filteredPlayers.size(); i++) {
+                    if (filteredPlayers.get(i).getName().toUpperCase().contains(constraint)) {
                         filters.add(new RowModel(filteredPlayers.get(i).getName(), filteredPlayers.get(i).getPosition(), filteredPlayers.get(i).getNumber(), filteredPlayers.get(i).getPhoto()));
                     }
-                    if(filteredPlayers.get(i).getPosition().toUpperCase().contains(constraint)){
+                    if (filteredPlayers.get(i).getPosition().toUpperCase().contains(constraint)) {
                         filters.add(new RowModel(filteredPlayers.get(i).getName(), filteredPlayers.get(i).getPosition(), filteredPlayers.get(i).getNumber(), filteredPlayers.get(i).getPhoto()));
                     }
-                    if(filteredPlayers.get(i).getNumber().toUpperCase().contains(constraint)){
+                    if (filteredPlayers.get(i).getNumber().toUpperCase().contains(constraint)) {
                         filters.add(new RowModel(filteredPlayers.get(i).getName(), filteredPlayers.get(i).getPosition(), filteredPlayers.get(i).getNumber(), filteredPlayers.get(i).getPhoto()));
                     }
 
                 }
                 filterResults.count = filters.size();
                 filterResults.values = filters;
-            } else{
+            } else {
                 filterResults.count = filteredPlayers.size();
                 filterResults.values = filteredPlayers;
             }

@@ -1,9 +1,9 @@
 package elementrdtesttask.com.elementrdtesttask;
 
 
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -14,7 +14,6 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SearchView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -28,8 +27,6 @@ public class FragmentOne extends Fragment implements AdapterView.OnItemClickList
     private ListView listView;
     private ListAdapter listAdapter;
     private ArrayList<RowModel> rowModels;
-
-
 
 
     @Override
@@ -53,7 +50,7 @@ public class FragmentOne extends Fragment implements AdapterView.OnItemClickList
         TypedArray photos = getActivity().getResources().obtainTypedArray(R.array.arsenalPhotos);
 
         for (int i = 0; i < names.size(); i++) {
-            rowModels.add(new RowModel(names.get(i), positions.get(i), numbers.get(i), photos.getResourceId(i,0)));
+            rowModels.add(new RowModel(names.get(i), positions.get(i), numbers.get(i), photos.getResourceId(i, 0)));
         }
         return rowModels;
     }
@@ -82,6 +79,17 @@ public class FragmentOne extends Fragment implements AdapterView.OnItemClickList
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        Toast.makeText(this.getContext(), rowModels.get(position).getName()+ " was pressed", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this.getContext(), rowModels.get(position).getName() + " was pressed", Toast.LENGTH_SHORT).show();
+
+        Intent intent = new Intent(getContext(), PlayerInfo.class);
+
+        intent.putExtra("name", rowModels.get(position).getName());
+        intent.putExtra("position", rowModels.get(position).getPosition());
+        intent.putExtra("number", rowModels.get(position).getNumber());
+        intent.putExtra("photo", rowModels.get(position).getPhoto());
+
+        startActivity(intent);
+        getActivity().overridePendingTransition(R.animator.from_right, R.animator.to_left);
+
     }
 }
