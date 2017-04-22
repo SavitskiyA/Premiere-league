@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="chelseaNames">
+        <item>Asmir Begovic</item>
+        <item>Thibaut Courtois</item>
+        <item>Eduardo</item>
+        <item>Kurt Zouma</item>
+        <item>Gary Cahill</item>
+        <item>John Terry</item>
+        <item>César Azpilicueta</item>
+        <item>Ola Aina</item>
+        <item>Marcos Alonso</item>
+        <item>David Luiz</item>
+        <item>Nathan Aké</item>
+        <item>Cesc Fàbregas</item>
+        <item>Eden Hazard</item>
+        <item>Nemanja Matic</item>
+        <item>Willian</item>
+        <item>Ruben Loftus-Cheek</item>
+    </string-array>
+
+    <string-array name="chelseaPositions">
+        <item>Goalkeeper</item>
+        <item>Goalkeeper</item>
+        <item>Goalkeeper</item>
+        <item>Defender</item>
+        <item>Defender</item>
+        <item>Defender</item>
+        <item>Defender</item>
+        <item>Defender</item>
+        <item>Defender</item>
+        <item>Defender</item>
+        <item>Defender</item>
+        <item>Midfielder</item>
+        <item>Midfielder</item>
+        <item>Midfielder</item>
+        <item>Midfielder</item>
+        <item>Midfielder</item>
+    </string-array>
+
+    <string-array name="chelseaNumbers">
+        <item>1</item>
+        <item>13</item>
+        <item>37</item>
+        <item>5</item>
+        <item>24</item>
+        <item>26</item>
+        <item>28</item>
+        <item>34</item>
+        <item>3</item>
+        <item>30</item>
+        <item>6</item>
+        <item>4</item>
+        <item>10</item>
+        <item>21</item>
+        <item>22</item>
+        <item>14</item>
+    </string-array>
+
+    <integer-array name="chelseaPhotos">
+        <item>@drawable/ic_begovich</item>
+        <item>@drawable/ic_cortois</item>
+        <item>@drawable/ic_eduardo</item>
+        <item>@drawable/ic_zouma</item>
+        <item>@drawable/ic_cahill</item>
+        <item>@drawable/ic_terry</item>
+        <item>@drawable/ic_azpilicueta</item>
+        <item>@drawable/ic_aina</item>
+        <item>@drawable/ic_alonso</item>
+        <item>@drawable/ic_luiz</item>
+        <item>@drawable/ic_ake</item>
+        <item>@drawable/ic_fabregas</item>
+        <item>@drawable/ic_hazard</item>
+        <item>@drawable/ic_matic</item>
+        <item>@drawable/ic_willian</item>
+        <item>@drawable/ic_cheek</item>
+    </integer-array>
+
+
+
+
+    <string-array name="arsenalNames">
+        <item>Matt Macey</item>
+        <item>Gabriel</item>
+        <item>Carl Jenkinson</item>
+        <item>Alex Oxlade-Chamberlain</item>
+
+
+    </string-array>
+
+    <string-array name="arsenalPositions">
+        <item>Goalkeeper</item>
+        <item>Defender</item>
+        <item>Defender</item>
+        <item>Midfielder</item>
+
+           </string-array>
+
+    <string-array name="arsenalNumbers">
+        <item>54</item>
+        <item>5</item>
+        <item>25</item>
+        <item>15</item>
+
+    </string-array>
+
+    <integer-array name="arsenalPhotos">
+        <item>@drawable/ic_matt</item>
+        <item>@drawable/ic_gabriel</item>
+        <item>@drawable/ic_jenkinson</item>
+        <item>@drawable/ic_alex</item>
+
+    </integer-array>
+
+</resources>
